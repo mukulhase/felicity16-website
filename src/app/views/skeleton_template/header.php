@@ -10,6 +10,8 @@ if (empty($is_ajax)):
     <meta property="og:description" content="<?= __("Felicity is the annual technical and cultural fest of IIIT-H. Includes technical, cultural and literary events, Major nights, talks, workshops and performances. We, at IIIT-H, believe in giving back to the society and use Felicity as a medium to serve this motive and pickup various social initiatives.") ?>">
     <meta property="og:title" content="<?= isset($title) ? $title . ' · ' : '' ?><?= __('Felicity') ?> · <?= __('IIIT-H') ?>">
     <meta property="og:image" content="<?= base_url() . (isset($og_image) ? $og_image : 'files/16/poster1.jpg') ?>">
+<script src="http://cdn.jsdelivr.net/vivus/latest/vivus.min.js"></script>
+
 
     <?php
     global $cfg;
@@ -52,15 +54,15 @@ if (empty($is_ajax)):
     <article class="landing">
         <div class="landing-content">
             <p class="iiit-h">
-                <img src="<?= base_url() ?>static/images/iiit-logo.png" alt="IIIT H Logo"> <?= __('IIIT-H') ?>
+                <object id="my-svg" type="image/svg+xml" data="<?= base_url() ?>static/images/felicity.svg"></object>
+                <script>
+                new Vivus('my-svg', {duration: 150, type: 'oneByOne'}, function doDone(obj) {
+                    obj.el.classList.add('finished');
+                });
+                </script>
             </p>
-            <p class="presents">
-                <?= __('presents') ?>
-            </p>
-            <h1 class="title"><a href="<?= locale_base_url() ?>"><?= __('Felicity') ?></a></h1>
-            <p class="year">2016</p>
-            <p class="tagline"><?= __('Where magic happens') ?></p>
-            <p class="dates"><?= __('February 19<sup>th</sup>, 20<sup>th</sup> and 21<sup>st</sup>') ?></p>
+            <p  id="typed" class="tagline"><?= __('Where magic happens') ?></p>
+            <p class="dates"><?= __('January\'17') ?></p>
         </div>
     </article>
     <?php if ($lang_list): ?>
@@ -84,5 +86,15 @@ if (empty($is_ajax)):
         <?php endif; ?>
     </div>
     <?php endif; ?>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.0.slim.min.js"></script>
+<script type="text/javascript" src="
+https://cdn.jsdelivr.net/theaterjs/latest/theater.min.js"></script>
+    <script type="text/javascript">
+    var theater = new theaterJS();
+    theater.addActor('typed');
+    theater.addScene('typed:This page is under construction :/', 400).addScene(theater.replay)
+
+</script>
+
     <div class="content-holder">
 <?php endif;

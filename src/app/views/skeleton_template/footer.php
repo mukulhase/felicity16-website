@@ -88,6 +88,7 @@ if (empty($is_ajax)):
             <?php endforeach; ?>
         </div>
         <?php endif; ?>
+<!--
         <ul class="primary-nav left">
             <li>
                 <?php $primary_nav_link('about', __('About'), 'dragon8.png'); ?>
@@ -111,6 +112,7 @@ if (empty($is_ajax)):
             </li>
         </ul>
     </nav>
+-->
     <script src="<?= base_url() ?>static/scripts/common.js" charset="utf-8"></script>
     <script src="<?= base_url() ?>static/scripts/ajaxify.js" charset="utf-8"></script>
     <?php if ($page_slug !== "static"): ?>
