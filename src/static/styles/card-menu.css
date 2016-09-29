@@ -111,7 +111,7 @@ body {
 }
 .card .back {
   position: absolute;
-  background-image: url("faces/back.png");
+  background-image: url("../images/faces/back.png");
   background-position: 50% 50%;
   -webkit-background-size: 100% 100%;
   -moz-background-size: 100% 100%;
