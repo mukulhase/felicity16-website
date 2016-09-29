@@ -29,7 +29,6 @@ if (empty($is_ajax)):
     </div>
     <nav>
         <?php if (isset($categorised_event)): ?>
-        <div id="test-button"> </div>
         <div class="crystal-ball">
             <div class="ball-title" id="cards-container"><?= __('Events') ?> </div>
             <ul class="events-nav">
