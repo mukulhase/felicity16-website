@@ -29,8 +29,9 @@ if (empty($is_ajax)):
     </div>
     <nav>
         <?php if (isset($categorised_event)): ?>
+        <div id="test-button"> </div>
         <div class="crystal-ball">
-            <div class="ball-title"><?= __('Events') ?></div>
+            <div class="ball-title" id="cards-container"><?= __('Events') ?> </div>
             <ul class="events-nav">
                 <?php foreach ($categorised_event as $category => $events): ?>
                     <li>
@@ -113,7 +114,10 @@ if (empty($is_ajax)):
         </ul>
     </nav>
 -->
+    <link href="<?= base_url() ?>static/styles/card-menu.css" rel="stylesheet">
     <script src="<?= base_url() ?>static/scripts/common.js" charset="utf-8"></script>
+    <script src="<?= base_url() ?>static/scripts/deck.js" charset="utf-8"></script>
+    <script src="<?= base_url() ?>static/scripts/card-menu.js" charset="utf-8"></script>
     <script src="<?= base_url() ?>static/scripts/ajaxify.js" charset="utf-8"></script>
     <?php if ($page_slug !== "static"): ?>
     <script src="<?= base_url() ?>static/scripts/navigation.js?v=4" charset="utf-8"></script>
