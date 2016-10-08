@@ -224,12 +224,13 @@ nav {
     height: #{$ball-height};
     z-index: 101;
     pointer-events: none;
+	/*
     background-image: url('../images/bg.jpg');
     background-size: cover;
     background-position: 0 0;
     background-attachment: fixed;
     transition: background-position $page-open-animation-timeout;
-
+   */
     &:before {
         content: '';
         display: block;
@@ -326,27 +327,13 @@ nav {
     }
 }
 
-.crystal-ball {
+#cards-container {
     pointer-events: all;
     position: relative;
-    height: 2 * $ball-radius;
-    width: 2 * $ball-radius;
+	left:50%;
+	top:50%;
     margin: auto;
-    border-radius: $ball-radius;
-    background-color: rgba(255, 255, 255, .95);
-    box-shadow: 0 0 10px 10px white, 0 0 10px 3px white, 0 0 10px 10px white inset, 0 0 1em #fff, 0 0 2em .5em #fff, 0 0 3em #fff, 0 0 4em #fff, 0 0 1em #fff inset, 0 0 3em #fff inset;
-    transition: box-shadow 1s;
     z-index: 1;
-
-    .ball-title {
-        width: 100%;
-        font-size: 1.7em;
-        position: absolute;
-        bottom: $ball-dip + 1rem;
-        text-align: center;
-        color: orange;
-        font-weight: bold;
-    }
 }
 
 .big-wave {
