@@ -273,7 +273,7 @@ h1, h2, h3 {
 }
 
 h1 {
-	font-size: 2.83333em;
+	font-size: 3.83333em;
 }
 
 h2 {
@@ -841,6 +841,16 @@ footer .twitter-share-button {
 	top: 0%;
 }
 
+.land3 {
+	background: url(../../images/1hill.png) no-repeat 50% 100%;
+	bottom: -200px;
+	background-size: cover;
+	position: absolute;
+	width: 105%;
+	left: -5%;
+	top: 15%;
+}
+
 .house {
 	background: url(../../images/2house.png) no-repeat 50% 100%;
 	bottom: -90px;
@@ -876,20 +886,57 @@ footer .twitter-share-button {
 	left: -100%;
 }
 .wave:after {
-	background-color: black;
+	background-color: #10e4e8;
 	position: absolute;
 	display: block;
 	content: "";
-	height: 500px;
 	width: 100%;
-	top: 100%;
+	top: 150%;
 	left: 0;
 }
 .wave.plain {
-	background-image: url(../../images/wave1.png);
+	background-image: url(../../images/wave2.png);
 }
 .wave.paint {
-	background-image: url(../../images/wave2.png);
+	background-image: url(../../images/wave1.png);
+}
+
+.cloud {
+	background-image: url(../../images/cloud-1.png);
+	background-size: cover;
+	position: absolute;
+	width: 103%;
+}
+
+.cloud-1 {
+	bottom: -90px;
+	left: -80%;
+	top: 2%;	
+}
+
+
+.cloud-2 {
+	bottom: -40px;
+	left: -60%;
+	top: -4%;	
+}
+
+.cloud-3 {
+	bottom: -90px;
+	left: -44%;
+	top: 2%;	
+}
+
+.cloud-4 {
+	bottom: -40px;
+	left: -27%;
+	top: -4%;	
+}
+
+.cloud-5 {
+	bottom: -90px;
+	left: -2%;
+	top: 2%;	
 }
 
 .light {
