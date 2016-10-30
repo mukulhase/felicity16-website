@@ -10,26 +10,8 @@
 	<meta name="apple-mobile-web-app-capable" content="yes">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
-	<!-- Core Meta Data -->
-	<meta name="author" content="Matthew Wagerfield">
-	<meta name="description" content="Simple, lightweight Parallax Engine that reacts to the orientation of a smart device">
-	<meta name="keywords" content="parallax,javascript,jquery,zepto,plugin">
-
-	<!-- Open Graph Meta Data -->
-	<meta property="og:description" content="Simple, lightweight Parallax Engine that reacts to the orientation of a smart device">
-	<meta property="og:image" content="http://wagerfield.github.io/parallax/assets/images/thumbnail.png">
-	<meta property="og:site_name" content="parallax.js">
-	<meta property="og:title" content="parallax.js">
-	<meta property="og:type" content="website">
-	<meta property="og:url" content="http://wagerfield.github.io/parallax/index.html">
-
 	<!-- Styles -->
 	<link rel="stylesheet" type="text/css" href="assets/styles/css/styles.css"/>
-
-	<!-- Favicon -->
-	<link rel="shortcut icon" href="http://matthew.wagerfield.com/favicon.ico" type="image/x-icon">
-	<link rel="shortcut icon" href="http://matthew.wagerfield.com/favicon.png" type="image/png">
-	<link rel="shortcut icon" href="http://wagerfield.github.io/parallax/favicon.png" type="image/png">
 
 	<!-- Apple Touch Icons -->
 	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="apple-touch-icon-144x144-precomposed.png">
@@ -84,11 +66,11 @@
 			</li>
 		  </ul>
 		</li-->
-		<li id="temp" class="layer" data-depth="0.15" ><div class="cloud cloud-1"></div></li>
-		<li class="layer" data-depth="0.09"><div class="cloud cloud-2"></div></li>
-		<li class="layer" data-depth="0.15"><div class="cloud cloud-3"></div></li>
-		<li class="layer" data-depth="0.09"><div class="cloud cloud-4"></div></li>
-		<li class="layer" data-depth="0.15"><div class="cloud cloud-5"></div></li>
+		<li onclick="showDetails()" class="layer" data-depth="0.15"><div class="cloud cloud-1"></div></li>
+		<li onclick="showDetails()" class="layer" data-depth="0.09"><div class="cloud cloud-2"></div></li>
+		<li onclick="showDetails()" class="layer" data-depth="0.15"><div class="cloud cloud-3"></div></li>
+		<li onclick="showDetails()" class="layer" data-depth="0.09"><div class="cloud cloud-4"></div></li>
+		<li onclick="showDetails()" class="layer" data-depth="0.15"><div class="cloud cloud-5"></div></li>
 		<li class="layer" data-depth="0.20"><div class="land2"></div></li>
 		<li class="layer" data-depth="0.21"><div class="land3"></div></li>
 		<li class="layer" data-depth="0.23"><div class="house"></div></li>
@@ -112,6 +94,7 @@
 		  </ul>
 		</li-->
 		<li class="layer" data-depth="0.60"><div class="wave plain depth-60"></div></li>
+		<li class="layer" data-depth="0.65"><div class="boat"></div></li>
 		<li class="layer" data-depth="0.80"><div class="wave plain depth-80"></div></li>
 		<li class="layer" data-depth="1.00"><div class="wave paint depth-100"></div></li>
 	  </ul>
@@ -120,7 +103,7 @@
 		  <div class="cables center accelerate">
 			<div class="panel accelerate">
 			  <header>
-				<h1>felicity<em>17</em></h1>
+				<h1 onclick="alert(1)">felicity<em>17</em></h1>
 			  </header>
 			  <p>Insert random content here</p>
 			  <ul class="links">

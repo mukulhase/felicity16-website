@@ -780,6 +780,7 @@ footer .twitter-share-button {
 .layer {
 	position: absolute;
 }
+
 .layer div {
 	-webkit-transform: translate3d(0,0,0);
 	-moz-transform: translate3d(0,0,0);
@@ -861,6 +862,24 @@ footer .twitter-share-button {
 	top: 4%;
 }
 
+.boat {
+	-webkit-transform-origin: 50% 90%;
+	-moz-transform-origin: 50% 90%;
+	transform-origin: 30% 90%;
+	-webkit-animation: lighthouse 4s 0.1s infinite alternate cubic-bezier(0.455, 0.03, 0.515, 0.955);
+	-moz-animation: lighthouse 4s 0.1s infinite alternate cubic-bezier(0.455, 0.03, 0.515, 0.955);
+	animation: lighthouse 4s 0.1s infinite alternate ease-in(0.555, 0.53, 0.615, 0.955);
+	margin: 0px -64px;
+	background-size: 128px 224px;
+	height: 324px;
+	width: 128px;
+	background-image: url(../../images/boat.png);
+	background-repeat: no-repeat;
+	bottom: 64px;
+	position: absolute;
+	left: 20%;
+}
+
 .lighthouse {
 	-webkit-transform-origin: 50% 90%;
 	-moz-transform-origin: 50% 90%;
@@ -885,6 +904,7 @@ footer .twitter-share-button {
 	width: 300%;
 	left: -100%;
 }
+
 .wave:after {
 	background-color: #10e4e8;
 	position: absolute;
@@ -894,9 +914,11 @@ footer .twitter-share-button {
 	top: 150%;
 	left: 0;
 }
+
 .wave.plain {
 	background-image: url(../../images/wave2.png);
 }
+
 .wave.paint {
 	background-image: url(../../images/wave1.png);
 }
@@ -1604,6 +1626,14 @@ footer .twitter-share-button {
 		background-size: 192px 336px;
 		height: 336px;
 		width: 192px;
+		bottom: 128px;
+	}
+
+	.boat {
+		margin: 0px -96px;
+		background-size: 500px 350px;
+		height: 300px;
+		width: 352px;
 		bottom: 128px;
 	}
 
