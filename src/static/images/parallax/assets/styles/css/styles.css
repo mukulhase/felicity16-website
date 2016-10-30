@@ -369,9 +369,10 @@ footer .twitter-share-button {
 }
 
 .center {
-	max-width: 400px;
+	/*max-width: 400px;*/
 	margin: 0 auto;
 	width: 88%;
+	height: 100%;
 }
 
 .wrapper {
@@ -404,6 +405,8 @@ footer .twitter-share-button {
 	-moz-transform: translate3d(0,0,0);
 	transform: translate3d(0,0,0);
 	position: relative;
+	top: 10%;
+	height: 70%;
 }
 
 .about {
@@ -716,7 +719,7 @@ footer .twitter-share-button {
 	background: white;
 }
 .prompt .center {
-	max-width: 300px;
+	/*max-width: 300px;*/
 	width: 82%;
 }
 .prompt .panel {
@@ -1557,7 +1560,7 @@ footer .twitter-share-button {
 	}
 
 	.center {
-		max-width: 440px;
+		/*max-width: 440px;*/
 	}
 
 	.about .panel:after {
@@ -1858,7 +1861,7 @@ footer .twitter-share-button {
 	}
 
 	.center {
-		max-width: 560px;
+		/*max-width: 560px;*/
 	}
 
 	.about .panel:after {
@@ -2113,7 +2116,7 @@ footer .twitter-share-button {
 	}
 
 	.center {
-		max-width: 620px;
+		/*max-width: 620px;*/
 	}
 
 	.about .panel:after {
