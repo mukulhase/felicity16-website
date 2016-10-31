@@ -405,11 +405,11 @@ footer .twitter-share-button {
 	-moz-transform: translate3d(0,0,0);
 	transform: translate3d(0,0,0);
 	position: relative;
-	top: 10%;
-	height: 70%;
+	padding-bottom: 18%;
 }
 
 .about {
+	padding-top: 5%;
 	-webkit-font-smoothing: auto;
 	-webkit-perspective: 1000px;
 	-moz-perspective: 1000px;
