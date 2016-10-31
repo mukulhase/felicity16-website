@@ -3,33 +3,17 @@
   <head>
 
 	<meta charset="utf-8">
+	<script src="sketch/sketch.js"></script>
+    <link rel="stylesheet" href="sketch/example.css">
 
 	<title>Felicity . Forever Young</title>
-    <link rel="stylesheet" href="sketch/example.css">
+
 	<!-- Behavioral Meta Data -->
 	<meta name="apple-mobile-web-app-capable" content="yes">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
-	<!-- Core Meta Data -->
-	<meta name="author" content="Matthew Wagerfield">
-	<meta name="description" content="Simple, lightweight Parallax Engine that reacts to the orientation of a smart device">
-	<meta name="keywords" content="parallax,javascript,jquery,zepto,plugin">
-
-	<!-- Open Graph Meta Data -->
-	<meta property="og:description" content="Simple, lightweight Parallax Engine that reacts to the orientation of a smart device">
-	<meta property="og:image" content="http://wagerfield.github.io/parallax/assets/images/thumbnail.png">
-	<meta property="og:site_name" content="parallax.js">
-	<meta property="og:title" content="parallax.js">
-	<meta property="og:type" content="website">
-	<meta property="og:url" content="http://wagerfield.github.io/parallax/index.html">
-
 	<!-- Styles -->
 	<link rel="stylesheet" type="text/css" href="assets/styles/css/styles.css"/>
-
-	<!-- Favicon -->
-	<link rel="shortcut icon" href="http://matthew.wagerfield.com/favicon.ico" type="image/x-icon">
-	<link rel="shortcut icon" href="http://matthew.wagerfield.com/favicon.png" type="image/png">
-	<link rel="shortcut icon" href="http://wagerfield.github.io/parallax/favicon.png" type="image/png">
 
 	<!-- Apple Touch Icons -->
 	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="apple-touch-icon-144x144-precomposed.png">
@@ -44,24 +28,28 @@
 	<link rel="apple-touch-startup-image" href="http://matthew.wagerfield.com/parallax/apple-touch-startup-image-748x1024.png" media="(device-width: 768px) and (orientation: landscape)">
 	<link rel="apple-touch-startup-image" href="http://matthew.wagerfield.com/parallax/apple-touch-startup-image-1536x2008.png" media="(device-width: 1536px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2)">
 	<link rel="apple-touch-startup-image" href="http://matthew.wagerfield.com/parallax/apple-touch-startup-image-2048x1496.png" media="(device-width: 1536px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2)">
-
+	<style type="text/css">
+	.iparticles{
+	/*margin: -24px;*/
+	position: absolute;
+	top: 0%;
+	left: 0%;
+		}
+	</style>
   </head>
   <body>
-	<script src="sketch/sketch.js"></script>
+
 	<div id="fb-root"></div>
+
 	<div id="container" class="wrapper">
-	  
 	  <ul id="scene" class="scene unselectable"
-		  data-friction-x="0.07"
+		  data-friction-x="0.1"
 		  data-friction-y="0.1"
-		  data-scalar-x="30"
-		  data-scalar-y="10">
-
-		<li class="layer" data-depth="0.00"><div class="background" ></div></li>
-		<li class="layer" data-depth="0.10"><div class="mountain"></div></li>
-		<li class="layer" data-depth="0.15"><h1 class="title"><b>felicity<em>17</em></b></h1></li>
-
-<!-- 		<li class="layer" data-depth="0.15">
+		  data-scalar-x="25"
+		  data-scalar-y="15">
+		<li class="layer" data-depth="0.00"><div class="background"></div></li>
+		<li class="layer" data-depth="0.08"><div class="mountain"></div></li>
+		<!--li class="layer" data-depth="0.15">
 		  <ul class="rope depth-10">
 			<li><img src="assets/images/rope.png" alt="Rope"></li>
 			<li class="hanger position-2">
@@ -75,6 +63,7 @@
 			</li>
 		  </ul>
 		</li>
+		<li class="layer" data-depth="0.20"><h1 class="title"><b>felicity<em>17</em></b></h1></li>
 		<li class="layer" data-depth="0.30">
 		  <ul class="rope depth-30">
 			<li><img src="assets/images/rope.png" alt="Rope"></li>
@@ -85,13 +74,19 @@
 			  <div class="board cloud-4 swing-1"></div>
 			</li>
 		  </ul>
-		</li>
- -->
+		</li-->
+		<li onclick="showDetails()" class="layer" data-depth="0.15"><div class="cloud cloud-1"></div></li>
+		<li onclick="showDetails()" class="layer" data-depth="0.09"><div class="cloud cloud-2"></div></li>
+		<li onclick="showDetails()" class="layer" data-depth="0.15"><div class="cloud cloud-3"></div></li>
+		<li onclick="showDetails()" class="layer" data-depth="0.09"><div class="cloud cloud-4"></div></li>
+		<li onclick="showDetails()" class="layer" data-depth="0.15"><div class="cloud cloud-5"></div></li>
 		<li class="layer" data-depth="0.20"><div class="land2"></div></li>
+		<li class="layer" data-depth="0.21"><div class="land3"></div></li>
 		<li class="layer" data-depth="0.23"><div class="house"></div></li>
 		<li class="layer" data-depth="0.27"><div class="land"></div></li>
 		<li class="layer" data-depth="0.40"><div class="wave plain depth-40"></div></li>
 		<li class="layer" data-depth="0.50"><div class="wave paint depth-50"></div></li>
+		<li class="layer" data-depth="0.28"><h1 class="title"><b>felicity<em>17</em></b></h1></li>
 		<!--li class="layer" data-depth="0.60"><div class="lighthouse depth-60"></div></li -->
 		<!--li class="layer" data-depth="0.60">
 		  <ul class="rope depth-60">
@@ -108,26 +103,26 @@
 		  </ul>
 		</li-->
 		<li class="layer" data-depth="0.60"><div class="wave plain depth-60"></div></li>
+		<li class="layer" data-depth="0.65"><div class="boat"></div></li>
 		<li class="layer" data-depth="0.80"><div class="wave plain depth-80"></div></li>
-		<li class="layer" data-depth="0.90"><div  class="wave paint depth-100"></div></li>
-		<!-- <li class="layer" data-depth="1.00"><div id="container1" style="z-index:2"></div></li> -->
-
+		<li class="layer" data-depth="1.00"><div class="wave paint depth-100"></div></li>
 	  </ul>
 	  <section id="about" class="wrapper about hide accelerate">
-		<div id="container1" style="z-index:2" class="cell accelerate">
+		<div class="cell accelerate">
 		  <div class="cables center accelerate">
-			<div class="panel accelerate" >
-			  <header>
-				<h1>felicity<em>17</em></h1>
-			  </header>
-			  <p>Insert random content here</p>
+			<div class="panel accelerate">
 			  <ul class="links">
 				<li><a>Login</a></li>
 				<li><a target="_blank" >Register</a></li>
 			  </ul>
+			  <header>
+				<h1 onclick="alert(1)">felicity<em>17</em></h1>
+			  </header>
+			  <p>Insert random content here</p>
 			</div>
 		  </div>
 		</div>
+
 	  </section>
 	  <button id="toggle" class="toggle i">
 		<div class="cross">
@@ -135,7 +130,8 @@
 		  <div class="y"></div>
 		</div>
 	  </button>
-	  </div>
+	  <div id="particles" class="iparticles"></div>
+	</div>
 	  <!-- Scripts -->
 	  <script src="assets/scripts/js/libraries.min.js"></script>
 	  <script src="deploy/jquery.parallax.js"></script>
@@ -230,7 +226,7 @@
 																				}(document, 'script', 'facebook-jssdk'));
 																				</script>
 
-		<script>
+	<script>
         // ----------------------------------------
         // Particle
         // ----------------------------------------
@@ -292,7 +288,7 @@
         var pool = [];
 
         var demo = Sketch.create({
-            container: document.getElementById( 'container1' )
+            container: document.getElementById( 'particles' )
         });
 
         demo.setup = function() {
@@ -364,6 +360,7 @@
         };
         
         </script>
+
 
   </body>
 </html>
