@@ -416,6 +416,7 @@ footer .twitter-share-button {
 	perspective: 1000px;
 	color: #666666;
 }
+
 .about:after {
 	background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0) 100%);
 	background-image: -moz-linear-gradient(top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0) 100%);
@@ -932,6 +933,7 @@ footer .twitter-share-button {
 	background-size: cover;
 	position: absolute;
 	width: 103%;
+	color: black;
 }
 
 .cloud-1 {

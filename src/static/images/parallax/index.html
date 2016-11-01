@@ -66,11 +66,6 @@
 			</li>
 		  </ul>
 		</li-->
-		<li onclick="showDetails()" class="layer" data-depth="0.15"><div class="cloud cloud-1"></div></li>
-		<li onclick="showDetails()" class="layer" data-depth="0.09"><div class="cloud cloud-2"></div></li>
-		<li onclick="showDetails()" class="layer" data-depth="0.15"><div class="cloud cloud-3"></div></li>
-		<li onclick="showDetails()" class="layer" data-depth="0.09"><div class="cloud cloud-4"></div></li>
-		<li onclick="showDetails()" class="layer" data-depth="0.15"><div class="cloud cloud-5"></div></li>
 		<li class="layer" data-depth="0.20"><div class="land2"></div></li>
 		<li class="layer" data-depth="0.21"><div class="land3"></div></li>
 		<li class="layer" data-depth="0.23"><div class="house"></div></li>
@@ -97,6 +92,11 @@
 		<li class="layer" data-depth="0.65"><div class="boat"></div></li>
 		<li class="layer" data-depth="0.80"><div class="wave plain depth-80"></div></li>
 		<li class="layer" data-depth="1.00"><div class="wave paint depth-100"></div></li>
+		<li class="layer" data-depth="0.15"><div onclick="showDetails('About')" class="cloud cloud-1">About</div></li>
+		<li class="layer" data-depth="0.09"><div onclick="showDetails('Gallery')" class="cloud cloud-2">Gallery</div></li>
+		<li class="layer" data-depth="0.15"><div onclick="showDetails('Schedule')" class="cloud cloud-3">Schedule</div></li>
+		<li class="layer" data-depth="0.09"><div onclick="showDetails('Sponsors')" class="cloud cloud-4">Sponsors</div></li>
+		<li class="layer" data-depth="0.15"><div onclick="showDetails('Team')" class="cloud cloud-5">Team</div></li>
 	  </ul>
 	  <section id="about" class="wrapper about hide accelerate">
 		<div class="cell accelerate">
@@ -107,7 +107,7 @@
 				<li><a target="_blank" >Register</a></li>
 			  </ul>
 			  <header>
-				<h1 onclick="alert(1)">felicity<em>17</em></h1>
+				<h1>felicity<em>17</em></h1>
 			  </header>
 			  <p>Insert random content here</p>
 			</div>
@@ -125,94 +125,89 @@
 	  <script src="deploy/jquery.parallax.js"></script>
 	  <script>
 
-		// jQuery Selections
-		var $html = $('html'),
-		$container = $('#container'),
-		$prompt = $('#prompt'),
-		$toggle = $('#toggle'),
-		$about = $('#about'),
-		$scene = $('#scene');
+	  // jQuery Selections
+	  var $html = $('html'),
+	  $container = $('#container'),
+	  $prompt = $('#prompt'),
+	  $toggle = $('#toggle'),
+	  $about = $('#about'),
+	  $scene = $('#scene');
 
-		// Hide browser menu.
-		(function() {
-		setTimeout(function(){window.scrollTo(0,0);},0);
-		})();
+	  // Hide browser menu.
+	  (function() {
+		  setTimeout(function(){window.scrollTo(0,0);},0);
+	  })();
 
-		// Setup FastClick.
-		FastClick.attach(document.body);
+	  // Setup FastClick.
+	  FastClick.attach(document.body);
 
-		// Add touch functionality.
-		if (Hammer.HAS_TOUCHEVENTS) {
-		$container.hammer({drag_lock_to_axis: true});
-		_.tap($html, 'a,button,[data-tap]');
-		}
+	  // Add touch functionality.
+	  if (Hammer.HAS_TOUCHEVENTS) {
+		  $container.hammer({drag_lock_to_axis: true});
+		  _.tap($html, 'a,button,[data-tap]');
+	  }
 
-		// Add touch or mouse class to html element.
-		$html.addClass(Hammer.HAS_TOUCHEVENTS ? 'touch' : 'mouse');
+	  // Add touch or mouse class to html element.
+	  $html.addClass(Hammer.HAS_TOUCHEVENTS ? 'touch' : 'mouse');
 
-		// Resize handler.
-		(resize = function() {
-		$scene[0].style.width = window.innerWidth + 'px';
-		$scene[0].style.height = window.innerHeight + 'px';
-		if (!$prompt.hasClass('hide')) {
-		if (window.innerWidth < 600) {
-								$toggle.addClass('hide');
-								} else {
-								$toggle.removeClass('hide');
-								}
-								}
-								})();
+	  // Resize handler.
+	  (resize = function() {
+		  $scene[0].style.width = window.innerWidth + 'px';
+		  $scene[0].style.height = window.innerHeight + 'px';
+		  if (!$prompt.hasClass('hide')) {
+			  if (window.innerWidth < 600) {
+				  $toggle.addClass('hide');
+			  } else {
+				  $toggle.removeClass('hide');
+			  }
+		  }
+	  })();
 
-								// Attach window listeners.
-								window.onresize = _.debounce(resize, 200);
-								window.onscroll = _.debounce(resize, 200);
+	  // Attach window listeners.
+	  window.onresize = _.debounce(resize, 200);
+	  window.onscroll = _.debounce(resize, 200);
 
-								function showDetails() {
-								$about.removeClass('hide');
-								$toggle.removeClass('i');
-								}
+	  function showDetails(type) {
+		  console.log(type);
+		  $about.removeClass('hide');
+		  $about.slideDown();
+		  $toggle.removeClass('i');
+	  }
 
-								function hideDetails() {
-								$about.addClass('hide');
-								$toggle.addClass('i');
-								}
+	  function hideDetails() {
+		  $about.addClass('hide');
+		  $about.slideUp();
+		  $toggle.addClass('i');
+	  }
 
-								// Listen for toggle click event.
-								$toggle.on('click', function(event) {
-								$toggle.hasClass('i') ? showDetails() : hideDetails();
-								});
+	  function toggleDetails(event) {
+		  $toggle.hasClass('i') ? showDetails() : hideDetails();
+	  }
+      hideDetails();
+	  // Listen for toggle click event.
+	  $toggle.on('click', function(event) {
+		  $toggle.hasClass('i') ? showDetails() : hideDetails();
+	  });
 
-								// Pretty simple huh?
-								$scene.parallax();
+	  // Pretty simple huh?
+	  $scene.parallax();
 
-								// Check for orientation support.
-								setTimeout(function() {
-								if ($scene.data('mode') === 'cursor') {
-								$prompt.removeClass('hide');
-								if (window.innerWidth < 600) $toggle.addClass('hide');
-														$prompt.on('click', function(event) {
-														$prompt.addClass('hide');
-														if (window.innerWidth < 600) {
-																				setTimeout(function() {
-																				$toggle.removeClass('hide');
-																				},1200);
-																				}
-																				});
-																				}
-																				},1000);
-
-																				// Twitter stuff.
-																				!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
-
-																				// Facebook stuff.
-																				(function(d, s, id) {
-																				var js, fjs = d.getElementsByTagName(s)[0];
-																				if (d.getElementById(id)) return;
-																				js = d.createElement(s); js.id = id;
-																				js.src = "//connect.facebook.net/en_GB/all.js#xfbml=1&appId=709933052350821";
-																				fjs.parentNode.insertBefore(js, fjs);
-																				}(document, 'script', 'facebook-jssdk'));
-																				</script>
+	  // Check for orientation support.
+	  setTimeout(function() {
+		  if ($scene.data('mode') === 'cursor') {
+			  $prompt.removeClass('hide');
+			  if (window.innerWidth < 600) $toggle.addClass('hide');
+			  $prompt.on('click', function(event) {
+				  $prompt.addClass('hide');
+				  if (window.innerWidth < 600) {
+					  setTimeout(function() {
+						  $toggle.removeClass('hide');
+					  },1200);
+				  }
+			  });
+		  }
+	  },1000);
+    </script>
 
   </body>
 </html>
