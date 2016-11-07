@@ -76,6 +76,9 @@
 	top: 42%;
 }
 .wave {
+	-webkit-animation: wave 4s 0.1s infinite linear;
+	-moz-animation: wave 4s 0.1s infinite linear;
+	animation: wave 4s 0.1s infinite linear;
 	background: transparent repeat-x;
 	position: absolute;
 	width: 300%;
