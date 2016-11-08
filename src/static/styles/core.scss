@@ -634,8 +634,7 @@ article {
     top: 100vh;
     padding-top: 5.5em;
     opacity: 1;
-    color: white;
-    background-color: rgba(26, 27, 45, .6);
+    background-image: url(https://raw.githubusercontent.com/mukulhase/felicity16-website/master/src/static/images/parallax/assets/images/panel.jpg);
     transition: all $page-open-animation-timeout;
     z-index: 2;
 
@@ -870,8 +869,8 @@ article {
 
         td {
             vertical-align: middle;
-            border-radius: 500;
-            border: 3px solid #756a81;
+            border-radius: 1.25em;
+            border: 3px solid #FFFFFF;
             height: 2.5em;
             width: 2.5em;
 
@@ -880,11 +879,11 @@ article {
             }
 
             &.has-event {
-                background-color: #373348;
+                background-color: #C2C2C2;
                 cursor: pointer;
 
                 &:hover {
-                    background-color: #111a29;
+                    background-color: #959494;
                 }
             }
         }
@@ -910,7 +909,7 @@ article {
         .event {
             display: block;
             position: relative;
-            background-color: #756a81;
+            background-color: #EC8080;
             border-radius: .2em;
             width: 10em;
             padding: .5em;
@@ -925,7 +924,6 @@ article {
             background-color: #fff;
             width: 1em;
             height: 1em;
-            border-radius: .5em;
         }
 
         .innercircle {
@@ -935,7 +933,6 @@ article {
             left: .25em;
             width: .5em;
             height: .5em;
-            border-radius: .25em;
         }
 
         .timeline:hover {
@@ -946,14 +943,14 @@ article {
             &:hover {
                 .innercircle,
                 .event {
-                    background-color: #505a89;
+                    background-color: #A6457C;
                 }
             }
 
             &.threads:hover {
                 .innercircle,
                 .event {
-                    background-color: #3c93b0;
+                    background-color: #66BD66;
                 }
             }
         }

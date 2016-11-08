@@ -28,8 +28,6 @@ $primary_nav_link = function ($name, $display_name, $image) use ($page_slug) {
     ?>
 </div>
 <nav>
-<!--div id="cards-container"/-->
-    <!--
     <ul class="primary-nav left">
     <li>
                 <?php $primary_nav_link('about', __('About'), 'dragon8.png'); ?>
@@ -53,11 +51,8 @@ $primary_nav_link = function ($name, $display_name, $image) use ($page_slug) {
     </li>
     </ul>
     </nav>
-    -->
-    <link href="<?= base_url() ?>static/styles/card-menu.css" rel="stylesheet">
+    
     <script src="<?= base_url() ?>static/scripts/common.js" charset="utf-8"></script>
-    <script src="<?= base_url() ?>static/scripts/deck.js" charset="utf-8"></script>
-    <script src="<?= base_url() ?>static/scripts/card-menu.js" charset="utf-8"></script>
     <script src="<?= base_url() ?>static/scripts/ajaxify.js" charset="utf-8"></script>
     <?php if ($page_slug !== "static"): ?>
     <script src="<?= base_url() ?>static/scripts/navigation.js?v=4" charset="utf-8"></script>
