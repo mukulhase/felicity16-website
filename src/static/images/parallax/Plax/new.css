@@ -86,7 +86,6 @@
 }
 .wave:after {
 	background-color: #10e4e8;
-
 	position: absolute;
 	display: block;
 	content: "";
@@ -100,12 +99,4 @@
 
 .wave.paint {
 	background-image: url(../assets/images/wave1.png);
-}
-.wave.depth-10 {
-	-webkit-animation: wave 8s 0.1s infinite linear;
-	-moz-animation: wave 8s 0.1s infinite linear;
-	animation: wave 8s 0.1s infinite linear;
-	bottom: 0px;
-	margin: 0px 0px;
-	background-size: 40px 16px;
 }
