@@ -28,7 +28,7 @@ $primary_nav_link = function ($name, $display_name, $image) use ($page_slug) {
     ?>
 </div>
 <nav>
-<div id="cards-container"/>
+<!--div id="cards-container"/-->
     <!--
     <ul class="primary-nav left">
     <li>
