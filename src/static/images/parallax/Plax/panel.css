@@ -4,14 +4,7 @@ html {
 	font-family: "Roboto Slab", sans-serif;
 	font-size: 15px;
 	text-align: center;
-}
-
-body {
 	line-height: 1.4em;
-}
-
-ul {
-	padding: 0;
 }
 
 a {
@@ -47,7 +40,7 @@ button {
 	background: #f2f2f2 url(images/panel.jpg) -7px 0;
 	background-color: rgba(255, 255, 255, 0.0);
 	background-size: 399px 357px;
-	padding-bottom: 50px;
+	padding-bottom: 40px;
 	height: 88vh;
 	margin: 0 auto;
 	width: 88%;
@@ -63,6 +56,7 @@ button {
 	transform: translate3d(0,0,0);
 	position: relative;
 	overflow: scroll;
+	height: 90%;
 	overflow-x: hidden;
 }
 
@@ -102,10 +96,7 @@ button {
 
 .about .panel {
 	transform-origin: 50% 0%;
-/*	background: #f2f2f2 url(images/panel.jpg) -7px 0;
-	background-color: rgba(255, 255, 255, 0.0);
-	background-size: 399px 357px;
-*/}
+}
 
 .about .center:before {
 	border-left: 1px dashed rgba(29, 31, 39, 0.2);
