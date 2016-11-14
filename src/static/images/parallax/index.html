@@ -92,11 +92,12 @@
 		<li class="layer" data-depth="0.65"><div class="boat"></div></li>
 		<li class="layer" data-depth="0.80"><div class="wave plain depth-80"></div></li>
 		<li class="layer" data-depth="1.00"><div class="wave paint depth-100"></div></li>
-		<li class="layer" data-depth="0.15"><div onclick="showDetails('About')" class="cloud cloud-1">About</div></li>
-		<li class="layer" data-depth="0.09"><div onclick="showDetails('Gallery')" class="cloud cloud-2">Gallery</div></li>
-		<li class="layer" data-depth="0.15"><div onclick="showDetails('Schedule')" class="cloud cloud-3">Schedule</div></li>
-		<li class="layer" data-depth="0.09"><div onclick="showDetails('Sponsors')" class="cloud cloud-4">Sponsors</div></li>
-		<li class="layer" data-depth="0.15"><div onclick="showDetails('Team')" class="cloud cloud-5">Team</div></li>
+		<li class="layer" data-depth="0.09">
+			<div onclick="showDetails('Team')" class="cloud cloud-5">Team</div>
+			<div onclick="showDetails('Gallery')" class="cloud cloud-2">Gallery</div>
+			<div onclick="showDetails('Schedule')" class="cloud cloud-3">Schedule</div>
+			<div onclick="showDetails('Sponsors')" class="cloud cloud-4">Sponsors</div>
+			<div onclick="showDetails('About')" class="cloud cloud-1">About</div></li>
 	  </ul>
 	  <section id="about" class="wrapper about hide accelerate">
 		<div class="cell accelerate">
@@ -132,7 +133,10 @@
 	  $toggle = $('#toggle'),
 	  $about = $('#about'),
 	  $scene = $('#scene');
-
+		$('.cloud').on('click', function(event) {
+			console.log(event);
+		  alert("ho");
+	  });
 	  // Hide browser menu.
 	  (function() {
 		  setTimeout(function(){window.scrollTo(0,0);},0);
