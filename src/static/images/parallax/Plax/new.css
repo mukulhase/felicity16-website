@@ -1,5 +1,6 @@
 body {
-	background-color: lightblue;
+	background: url(../assets/images/background.png);
+	top: 40%;
 	background-size: cover;
 	text-align: center;
 
@@ -11,15 +12,15 @@ body {
 }
 
 .mountain {
- 	background: url(../assets/images/background.png) no-repeat 50% 100%;
+ 	background: url(../assets/images/mountains.png) no-repeat 50% 100%;
 	background-size: cover;
-	width: auto;
+	width: 115%;
 	height: 115%;
 }
 
 .land {
 	background: url(../assets/images/land.png) no-repeat 50% 100%;
-	bottom: -10vh;
+	bottom: -12vh;
 	background-size: cover;
 	position: absolute;
 	width: 110%;
@@ -28,14 +29,16 @@ body {
 }
 
 .land2 {
-	background: url(../assets/images/2hill.png) no-repeat 50% 100%;
-	bottom: -5vh;
+	background: url(../assets/images/grass.png) no-repeat 50% 50%;
+	/*background: url(../assets/images/2hill.png) no-repeat 50% 100%;*/
+	bottom: -80vh;
 	background-size: cover;
 	position: absolute;
-	width: 105%;
+	width: 115%;
+	height: 35%;
 	left: -5%;
-	top: 15%;
-
+	right: -5%;
+	top: 52%;
 }
 
 .land3 {
@@ -145,7 +148,7 @@ body {
 	-webkit-animation: wave 8s 0.1s infinite linear;
 	-moz-animation: wave 8s 0.1s infinite linear;
 	animation: wave 6s 0.1s infinite linear;
-	bottom: 6vh;
+	bottom: 4vh;
 	margin: 0px 0px;
 }
 
@@ -153,7 +156,7 @@ body {
 	-webkit-animation: wave 8s 0.1s infinite linear;
 	-moz-animation: wave 8s 0.1s infinite linear;
 	animation: wave 5s 0.1s infinite linear;
-	bottom: 10vh;
+	bottom: 8vh;
 	margin: 0px 0px;
 }
 
@@ -161,8 +164,27 @@ body {
 	-webkit-animation: wave 8s 0.1s infinite linear;
 	-moz-animation: wave 8s 0.1s infinite linear;
 	animation: wave 7s 0.1s infinite linear;
-	bottom: 15vh;
+	bottom: 12vh;
 	margin: 0px 0px;
+}
+
+.lighthouse {
+	-webkit-transform-origin: 50% 90%;
+	-moz-transform-origin: 50% 90%;
+	transform-origin: 50% 90%;
+	-webkit-animation: wave 4s 0.1s infinite alternate linear;
+	-moz-animation: wave 4s 0.1s infinite alternate linear;
+	animation: wave 4s 0.1s infinite alternate linear;
+	/*margin: 0px -64px;*/
+	background-size: 128px 224px;
+	height: 424px;
+	width: 648px;
+	background-image: url(../assets/images/boat.gif);
+	background-size: cover;
+	background-repeat: no-repeat;
+	bottom: 100px;
+	position: absolute;
+	right: 20%;
 }
 
 @-webkit-keyframes wave {
@@ -297,7 +319,7 @@ body {
 	background-image: url(../assets/images/cloud-1.png);
 	background-size: cover;
 	position: absolute;
-	height: 11.3vh;
+	height: 14.3vh;
 	width: 25.4vh;
 	color: black;
 	cursor: pointer;
@@ -628,7 +650,6 @@ body {
 	margin-top: -4px;
 	height: 16px;
 }
-
 .cross {
 	-webkit-transform: rotateZ(45deg);
 	-moz-transform: rotateZ(45deg);
