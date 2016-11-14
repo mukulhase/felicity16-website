@@ -219,14 +219,37 @@ body {
 	}
 }
 
+@keyframes cloud {
+	0% {
+		-webkit-transform: rotateZ(0deg) translate3d(0,10%,0) rotateZ(0deg);
+		-moz-transform: rotateZ(0deg) translate3d(0,10%,0) rotateZ(0deg);
+		transform: rotateZ(0deg) translate3d(0,10%,0) rotateZ(0deg);
+	}
+
+	100% {
+		-webkit-transform: rotateZ(360deg) translate3d(0,10%,0) rotateZ(-360deg);
+		-moz-transform: rotateZ(360deg) translate3d(0,10%,0) rotateZ(-360deg);
+		transform: rotateZ(360deg) translate3d(0,10%,0) rotateZ(-360deg);
+	}
+}
+
 .cloud {
 	background-image: url(../assets/images/cloud-1.png);
 	background-size: cover;
+	animation: wave 1s 0.01s infinite linear;
 	position: absolute;
 	height: 11.3vh;
 	width: 25.4vh;
 	color: black;
 }
+.cloud span{
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
 
 .cloud-1 {
 	left: 3%;
@@ -253,3 +276,13 @@ body {
 	left: 85%;
 	top: 8%;	
 }
+
+/* Mixin */
+@mixin vertical-align($position: relative) {
+  position: $position;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
