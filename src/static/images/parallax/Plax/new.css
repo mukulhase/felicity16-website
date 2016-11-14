@@ -340,12 +340,479 @@ body {
 	top: 8%;	
 }
 
-/* Mixin */
-@mixin vertical-align($position: relative) {
-  position: $position;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
+.wrapper {
+	min-height: 460px;
+	position: absolute;
+	overflow: hidden;
+	display: table;
+	height: 100%;
+	width: 100%;
+	left: 0;
+	top: 0;
 }
 
+.cell {
+	vertical-align: middle;
+	display: table-cell;
+}
+
+.panel {
+	-webkit-box-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+	-moz-box-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+	-webkit-border-radius: 6px;
+	-moz-border-radius: 6px;
+	border-radius: 6px;
+	-webkit-background-clip: padding-box;
+	-moz-background-clip: padding-box;
+	background-clip: padding-box;
+	-webkit-transform: translate3d(0,0,0);
+	-moz-transform: translate3d(0,0,0);
+	transform: translate3d(0,0,0);
+	position: relative;
+	padding-bottom: 18%;
+}
+
+.about {
+	padding-top: 5%;
+	-webkit-font-smoothing: auto;
+	-webkit-perspective: 1000px;
+	-moz-perspective: 1000px;
+	perspective: 1000px;
+	color: #666666;
+}
+
+.about:after {
+	background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0) 100%);
+	background-image: -moz-linear-gradient(top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0) 100%);
+	background-image: linear-gradient(top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0) 100%);
+	position: absolute;
+	display: block;
+	width: 100%;
+	content: "";
+	height: 5%;
+	left: 0;
+	top: 0;
+}
+.about.hide .cables {
+	-webkit-transform: translate3d(0,-10%,0) rotateX(-90deg);
+	-moz-transform: translate3d(0,-10%,0) rotateX(-90deg);
+	transform: translate3d(0,-10%,0) rotateX(-90deg);
+	opacity: 0;
+}
+.about.hide .panel {
+	-webkit-transform: rotateX(-20deg);
+	-moz-transform: rotateX(-20deg);
+	transform: rotateX(-20deg);
+}
+.about .panel,
+.about .cables {
+	-webkit-transform: translate3d(0,0,0);
+	-moz-transform: translate3d(0,0,0);
+	transform: translate3d(0,0,0);
+	-webkit-transform-style: preserve-3d;
+	-moz-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+	-webkit-backface-visibility: hidden;
+	-moz-backface-visibility: hidden;
+	backface-visibility: hidden;
+	position: relative;
+}
+.about .cables {
+	-webkit-transform-origin: 50% -100%;
+	-moz-transform-origin: 50% -100%;
+	transform-origin: 50% -100%;
+}
+.about .cables:before {
+	left: 10%;
+	background: transparent url(../../images/cable.png) 0 0 no-repeat;
+	position: absolute;
+	display: block;
+	height: 860px;
+	width: 30px;
+	content: "";
+	top: -837px;
+	z-index: 1;
+}
+.about .cables:after {
+	right: 10%;
+	background: transparent url(../../images/cable.png) 0 0 no-repeat;
+	position: absolute;
+	display: block;
+	height: 860px;
+	width: 30px;
+	content: "";
+	top: -837px;
+	z-index: 1;
+}
+.about .panel {
+	-webkit-transform-origin: 50% 0%;
+	-moz-transform-origin: 50% 0%;
+	transform-origin: 50% 0%;
+	background: #f2f2f2 url(../../images/panel.jpg) -7px 0;
+	background-size: 399px 357px;
+}
+.about .panel:before {
+	border-left: 1px dashed rgba(29, 31, 39, 0.2);
+	position: absolute;
+	display: block;
+	height: 100%;
+	content: "";
+	left: 5%;
+	top: 0;
+}
+.about .panel:after {
+	-webkit-border-radius: 0 0 6px 0;
+	-moz-border-radius: 0 0 6px 0;
+	border-radius: 0 0 6px 0;
+	-webkit-background-clip: padding-box;
+	-moz-background-clip: padding-box;
+	background-clip: padding-box;
+	background: transparent url(../../images/compass.png) 0 0 no-repeat;
+	background-size: 224px 224px;
+	position: absolute;
+	display: block;
+	height: 160px;
+	width: 120px;
+	opacity: 0.2;
+	content: "";
+	bottom: 0;
+	right: 0;
+}
+.about .panel header {
+	padding: 1em 0 1em;
+}
+.about .panel header:before {
+	-webkit-border-radius: 6px 0 0 0;
+	-moz-border-radius: 6px 0 0 0;
+	border-radius: 6px 0 0 0;
+	-webkit-background-clip: padding-box;
+	-moz-background-clip: padding-box;
+	background-clip: padding-box;
+	background: transparent url(../../images/map.png) 0 0 no-repeat;
+	background-size: 60.5px 82.5px;
+	position: absolute;
+	display: block;
+	height: 150px;
+	width: 110px;
+	opacity: 0.8;
+	content: "";
+	left: 0;
+	top: 0;
+}
+.about .panel h1 {
+	font-weight: 100;
+	color: #d92400;
+}
+.about .panel h1 em {
+	color: #1d1f27;
+}
+.about .panel p {
+	margin: 0 8% 1.2em;
+	position: relative;
+	z-index: 1;
+}
+.about .panel p strong {
+	font-weight: 700;
+	color: #1d1f27;
+}
+.about .panel .social {
+	margin: 1.4em 0 1em;
+	position: relative;
+	z-index: 1;
+}
+.about .panel .twitter-follow-button {
+	display: inline-block;
+	margin-bottom: 0.8em;
+}
+.about .panel .twitter-follow-button + .twitter-follow-button {
+	margin-left: 0.4em;
+}
+.about .panel .links {
+	zoom: 1;
+	-webkit-box-shadow: 0 0 8px 4px rgba(0, 0, 0, 0.1);
+	-moz-box-shadow: 0 0 8px 4px rgba(0, 0, 0, 0.1);
+	box-shadow: 0 0 8px 4px rgba(0, 0, 0, 0.1);
+	border-top: 1px solid rgba(0, 0, 0, 0.2);
+	position: relative;
+	z-index: 1;
+}
+.about .panel .links:after, .about .panel .links:before {
+	display: table;
+	content: "";
+}
+.about .panel .links:after {
+	clear: both;
+}
+.about .panel .links li {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	display: block;
+	float: left;
+	width: 50%;
+}
+.about .panel .links li a {
+	-webkit-border-radius: 0 0 0 5px;
+	-moz-border-radius: 0 0 0 5px;
+	border-radius: 0 0 0 5px;
+	-webkit-background-clip: padding-box;
+	-moz-background-clip: padding-box;
+	background-clip: padding-box;
+}
+.about .panel .links li + li {
+	border-left: 1px solid rgba(0, 0, 0, 0.2);
+}
+.about .panel .links li + li a {
+	-webkit-border-radius: 0 0 5px 0;
+	-moz-border-radius: 0 0 5px 0;
+	border-radius: 0 0 5px 0;
+	-webkit-background-clip: padding-box;
+	-moz-background-clip: padding-box;
+	background-clip: padding-box;
+}
+.about .panel .links a {
+	-webkit-font-smoothing: antialiased;
+	font-size: 1.33333em;
+	font-family: "Dosis", sans-serif;
+	text-transform: uppercase;
+	font-weight: 600;
+	padding: 1em 0 1.1em;
+	display: block;
+}
+.about .panel .links a.github:before, .about .panel .links a.download:before {
+	content: "";
+	font-family: "icons";
+	text-transform: none;
+	font-weight: normal;
+	font-style: normal;
+	line-height: 1em;
+	font-size: 0.8em;
+	margin-right: 0.5em;
+	margin-left: -0.8em;
+	position: relative;
+	top: -1px;
+}
+.about .panel .links a.download:before {
+	content: "d";
+}
+.about .panel .links a.github:before {
+	margin-right: 0.4em;
+	content: "g";
+}
+
+.toggle {
+	-webkit-box-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+	-moz-box-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+	margin: -24px;
+	position: absolute;
+	bottom: 11.6%;
+	left: 50%;
+	z-index:3;
+}
+.toggle.i .cross {
+	-webkit-transform: rotateZ(0deg);
+	-moz-transform: rotateZ(0deg);
+	transform: rotateZ(0deg);
+}
+.toggle.i .cross .x {
+	margin-left: -2px;
+	width: 4px;
+	margin-top: -12px;
+}
+.toggle.i .cross .y {
+	margin-top: -4px;
+	height: 16px;
+}
+
+.cross {
+	-webkit-transform: rotateZ(45deg);
+	-moz-transform: rotateZ(45deg);
+	transform: rotateZ(45deg);
+	position: absolute;
+	left: 50%;
+	top: 50%;
+}
+.cross .x, .cross .y {
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+	border-radius: 2px;
+	-webkit-background-clip: padding-box;
+	-moz-background-clip: padding-box;
+	background-clip: padding-box;
+	background-color: #1d1f27;
+	height: 4px;
+	width: 4px;
+	margin: -2px;
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+.cross .x {
+	margin-left: -12px;
+	margin-top: -2px;
+	width: 24px;
+}
+.cross .y {
+	margin-top: -12px;
+	height: 24px;
+}
+
+.prompt.hide {
+	visibility: hidden;
+}
+.prompt.hide .panel {
+	-webkit-transform: translate3d(0,250%,0) rotateY(360deg);
+	-moz-transform: translate3d(0,250%,0) rotateY(360deg);
+	transform: translate3d(0,250%,0) rotateY(360deg);
+	opacity: 0;
+}
+.prompt .cell {
+	-webkit-perspective: 1000px;
+	-moz-perspective: 1000px;
+	perspective: 1000px;
+}
+.prompt .dismiss {
+	-webkit-transform: scale(0.5);
+	-moz-transform: scale(0.5);
+	transform: scale(0.5);
+	background-color: transparent;
+	position: absolute;
+	right: 4px;
+	top: 4px;
+}
+.prompt .x, .prompt .y {
+	background: white;
+}
+.prompt .center {
+	/*max-width: 300px;*/
+	width: 82%;
+}
+.prompt .panel {
+	-webkit-perspective: none;
+	-moz-perspective: none;
+	perspective: none;
+	-webkit-transform-style: flat;
+	-moz-transform-style: flat;
+	transform-style: flat;
+	-webkit-transition: all 1.8s cubic-bezier(0.77, 0, 0.175, 1);
+	-moz-transition: all 1.8s cubic-bezier(0.77, 0, 0.175, 1);
+	transition: all 1.8s cubic-bezier(0.77, 0, 0.175, 1);
+	border: 1px solid rgba(255, 255, 255, 0.15);
+	background-color: rgba(0, 0, 0, 0.65);
+	padding: 1.2em 0 1.8em;
+}
+.prompt .panel img {
+	margin: 0.6em auto;
+	width: 100px;
+}
+.prompt .panel h2 {
+	margin: 0 0 0.4em;
+}
+.prompt .panel p {
+	font-size: 1.25em;
+	margin: 0 10% 1.25em;
+	line-height: 1.25em;
+	color: #999999;
+}
+.prompt .tilt-scene {
+	-webkit-perspective: 1000px;
+	-moz-perspective: 1000px;
+	perspective: 1000px;
+	-webkit-transform: translate3d(0,0,100px);
+	-moz-transform: translate3d(0,0,100px);
+	transform: translate3d(0,0,100px);
+	margin: 0 auto;
+	width: 60%;
+}
+.prompt .tilt {
+	-webkit-animation: tilt 4s infinite alternate cubic-bezier(0.455, 0.03, 0.515, 0.955);
+	-moz-animation: tilt 4s infinite alternate cubic-bezier(0.455, 0.03, 0.515, 0.955);
+	animation: tilt 4s infinite alternate cubic-bezier(0.455, 0.03, 0.515, 0.955);
+}
+
+html.mouse a:hover, html.mouse button:hover {
+	-webkit-transition: color 0.2s cubic-bezier(0.165, 0.84, 0.44, 1), background-color 0.2s cubic-bezier(0.165, 0.84, 0.44, 1), opacity 0.2s cubic-bezier(0.165, 0.84, 0.44, 1);
+	-moz-transition: color 0.2s cubic-bezier(0.165, 0.84, 0.44, 1), background-color 0.2s cubic-bezier(0.165, 0.84, 0.44, 1), opacity 0.2s cubic-bezier(0.165, 0.84, 0.44, 1);
+	transition: color 0.2s cubic-bezier(0.165, 0.84, 0.44, 1), background-color 0.2s cubic-bezier(0.165, 0.84, 0.44, 1), opacity 0.2s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+html.mouse a:hover {
+	color: #ff755a;
+}
+html.mouse button:hover {
+	background-color: #d92400;
+	color: white;
+}
+html.mouse .toggle:hover .x, html.mouse .toggle:hover .y {
+	background-color: white;
+}
+html.mouse .links a:hover {
+	background-color: #d92400;
+	color: white;
+}
+
+html.touch a.tap, html.touch button.tap {
+	-webkit-transition: color 0s cubic-bezier(0.25, 0.46, 0.45, 0.94), background-color 0s cubic-bezier(0.25, 0.46, 0.45, 0.94), opacity 0s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+	-moz-transition: color 0s cubic-bezier(0.25, 0.46, 0.45, 0.94), background-color 0s cubic-bezier(0.25, 0.46, 0.45, 0.94), opacity 0s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+	transition: color 0s cubic-bezier(0.25, 0.46, 0.45, 0.94), background-color 0s cubic-bezier(0.25, 0.46, 0.45, 0.94), opacity 0s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+html.touch a.tap {
+	color: #ff755a;
+}
+html.touch button.tap {
+	background-color: #d92400;
+	color: white;
+}
+html.touch .toggle.tap .x, html.touch .toggle.tap .y {
+	background-color: white;
+}
+html.touch .links a.tap {
+	background-color: #d92400;
+	color: white;
+}
+
+button {
+	-webkit-font-smoothing: antialiased;
+	-webkit-border-radius: 24px;
+	-moz-border-radius: 24px;
+	border-radius: 24px;
+	-webkit-background-clip: padding-box;
+	-moz-background-clip: padding-box;
+	background-clip: padding-box;
+	font-size: 1.33333em;
+	line-height: 45.6px;
+	font-family: "Dosis", sans-serif;
+	background-color: #f2f2f2;
+	font-weight: 600;
+	height: 48px;
+	width: 48px;
+	position: relative;
+	display: block;
+	margin: 0 auto;
+	outline: none;
+	border: none;
+}
+button.hide {
+	opacity: 0;
+}
+
+
+.about .panel,
+.about .cables {
+	-webkit-transition: all 0.8s cubic-bezier(0.77, 0, 0.175, 1);
+	-moz-transition: all 0.8s cubic-bezier(0.77, 0, 0.175, 1);
+	transition: all 0.8s cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+.accelerate {
+	-webkit-transform: translate3d(0,0,0);
+	-moz-transform: translate3d(0,0,0);
+	transform: translate3d(0,0,0);
+	-webkit-transform-style: preserve-3d;
+	-moz-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+	-webkit-backface-visibility: hidden;
+	-moz-backface-visibility: hidden;
+	backface-visibility: hidden;
+}
