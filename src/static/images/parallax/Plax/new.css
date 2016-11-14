@@ -3,7 +3,21 @@ body {
 	top: 40%;
 	background-size: cover;
 	text-align: center;
+}
 
+#frame {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	/*background-color: red;*/
+	z-index: 10000;
+	margin: 0px;
+	padding: 0px;
+	left: 0px;
+	top: 0px;
+	-moz-box-shadow:    inset 0 0 300px #000000;
+	-webkit-box-shadow: inset 0 0 300px #000000;
+	box-shadow:         inset 0 0 300px #000000;
 }
 
 .layer {
@@ -98,6 +112,7 @@ body {
 	left: -100%;
 	bottom: 0;
 	background-size: 40vh 20vh;
+	background-size: contain;
 	height: 20vh;
 }
 
@@ -120,6 +135,10 @@ body {
 	background-image: url(../assets/images/wave1.png);
 }
 
+.wave.front {
+	background-image: url(../assets/images/new_wave.png);
+}
+
 /*.wave.depth-10 {
 	-webkit-animation: wave 8s 0.1s infinite linear;
 	-moz-animation: wave 8s 0.1s infinite linear;
@@ -140,23 +159,26 @@ body {
 	-webkit-animation: wave 8s 0.1s infinite linear;
 	-moz-animation: wave 8s 0.1s infinite linear;
 	animation: wave 8s 0.1s infinite linear;
-	bottom: 0vh;
 	margin: 0px 0px;
+	bottom: -10vh;
+	height: 220px;
 }
 
 .wave.depth-40 {
 	-webkit-animation: wave 8s 0.1s infinite linear;
 	-moz-animation: wave 8s 0.1s infinite linear;
 	animation: wave 6s 0.1s infinite linear;
-	bottom: 4vh;
 	margin: 0px 0px;
+	bottom: 0vh;
+	height: 180px;
 }
 
 .wave.depth-50 {
 	-webkit-animation: wave 8s 0.1s infinite linear;
 	-moz-animation: wave 8s 0.1s infinite linear;
 	animation: wave 5s 0.1s infinite linear;
-	bottom: 8vh;
+	height: 140px;
+	bottom: 9vh;
 	margin: 0px 0px;
 }
 
@@ -164,8 +186,9 @@ body {
 	-webkit-animation: wave 8s 0.1s infinite linear;
 	-moz-animation: wave 8s 0.1s infinite linear;
 	animation: wave 7s 0.1s infinite linear;
-	bottom: 12vh;
 	margin: 0px 0px;
+	bottom: 18vh;
+	height: 100px;
 }
 
 .lighthouse {
