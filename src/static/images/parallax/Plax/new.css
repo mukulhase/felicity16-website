@@ -14,7 +14,7 @@ body {
  	background: url(../assets/images/background.png) no-repeat 50% 100%;
 	background-size: cover;
 	width: auto;
-	height: 113%;
+	height: 115%;
 }
 
 .land {
@@ -219,29 +219,87 @@ body {
 	}
 }
 
-@keyframes cloud {
+@-webkit-keyframes bob {
 	0% {
-		-webkit-transform: rotateZ(0deg) translate3d(0,10%,0) rotateZ(0deg);
-		-moz-transform: rotateZ(0deg) translate3d(0,10%,0) rotateZ(0deg);
-		transform: rotateZ(0deg) translate3d(0,10%,0) rotateZ(0deg);
+		transform: translate3d(0,10%,0);
+		-webkit-transform: translate3d(0,10%,0);
+		-moz-transform: translate3d(0,10%,0);
 	}
-
+	50% {
+		transform: translate3d(0,20%,0);
+		-webkit-transform: translate3d(0,20%,0);
+		-moz-transform: translate3d(0,20%,0);
+	}
 	100% {
-		-webkit-transform: rotateZ(360deg) translate3d(0,10%,0) rotateZ(-360deg);
-		-moz-transform: rotateZ(360deg) translate3d(0,10%,0) rotateZ(-360deg);
-		transform: rotateZ(360deg) translate3d(0,10%,0) rotateZ(-360deg);
+		transform: translate3d(0,10%,0);
+		-webkit-transform: translate3d(0,10%,0);
+		-moz-transform: translate3d(0,10%,0);
+	}
+}
+
+@-moz-keyframes bob {
+	0% {
+		transform: translate3d(0,10%,0);
+		-webkit-transform: translate3d(0,10%,0);
+		-moz-transform: translate3d(0,10%,0);
+	}
+	50% {
+		transform: translate3d(0,20%,0);
+		-webkit-transform: translate3d(0,20%,0);
+		-moz-transform: translate3d(0,20%,0);
+	}
+	100% {
+		transform: translate3d(0,10%,0);
+		-webkit-transform: translate3d(0,10%,0);
+		-moz-transform: translate3d(0,10%,0);
+	}
+}
+
+@-ms-keyframes bob {
+	0% {
+		transform: translate3d(0,10%,0);
+		-webkit-transform: translate3d(0,10%,0);
+		-moz-transform: translate3d(0,10%,0);
+	}
+	50% {
+		transform: translate3d(0,20%,0);
+		-webkit-transform: translate3d(0,20%,0);
+		-moz-transform: translate3d(0,20%,0);
+	}
+	100% {
+		transform: translate3d(0,10%,0);
+		-webkit-transform: translate3d(0,10%,0);
+		-moz-transform: translate3d(0,10%,0);
+	}
+}
+
+@keyframes bob {
+	0% {
+		transform: translate3d(0,10%,0);
+		-webkit-transform: translate3d(0,10%,0);
+		-moz-transform: translate3d(0,10%,0);
+	}
+	50% {
+		transform: translate3d(0,20%,0);
+		-webkit-transform: translate3d(0,20%,0);
+		-moz-transform: translate3d(0,20%,0);
+	}
+	100% {
+		transform: translate3d(0,10%,0);
+		-webkit-transform: translate3d(0,10%,0);
+		-moz-transform: translate3d(0,10%,0);
 	}
 }
 
 .cloud {
 	background-image: url(../assets/images/cloud-1.png);
 	background-size: cover;
-	animation: wave 1s 0.01s infinite linear;
 	position: absolute;
 	height: 11.3vh;
 	width: 25.4vh;
 	color: black;
 }
+
 .cloud span{
   position: relative;
   top: 50%;
@@ -253,27 +311,32 @@ body {
 
 .cloud-1 {
 	left: 3%;
+	animation: bob 1.9s 0.01s infinite linear;
 	top: 6%;	
 }
 
 
 .cloud-2 {
 	left: 20%;
+	animation: bob 2s 0.01s infinite linear;
 	top: 10%;	
 }
 
 .cloud-3 {
 	left: 50%;
+	animation: bob 1.8s 0.01s infinite linear;
 	top: 2%;	
 }
 
 .cloud-4 {
 	left: 70%;
+	animation: bob 1.6s 0.01s infinite linear;
 	top: 4%;	
 }
 
 .cloud-5 {
 	left: 85%;
+	animation: bob 1.7s 0.01s infinite linear;
 	top: 8%;	
 }
 

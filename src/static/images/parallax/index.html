@@ -94,11 +94,11 @@
 		<li class="layer" data-depth="0.80"><div class="wave paint depth-20"></div></li>
 		<li class="layer" data-depth="0.90"><div class="wave plain depth-10"></div></li>
 		<li class="layer" data-depth="0.09">
-			<div onclick="showDetails('Team')" class="cloud cloud-5"><span>Team</span></div>
-			<div onclick="showDetails('Gallery')" class="cloud cloud-2"><span>Gallery</span></div>
-			<div onclick="showDetails('Schedule')" class="cloud cloud-3"><span>Schedule</span></div>
-			<div onclick="showDetails('Sponsors')" class="cloud cloud-4"><span>Sponsors</span></div>
-			<div onclick="showDetails('About')" class="cloud cloud-1"><span>About</span></div>
+			<div onclick="toggleDetails('Team')" class="cloud cloud-5"><span>Team</span></div>
+			<div onclick="toggleDetails('Gallery')" class="cloud cloud-2"><span>Gallery</span></div>
+			<div onclick="toggleDetails('Schedule')" class="cloud cloud-3"><span>Schedule</span></div>
+			<div onclick="toggleDetails('Sponsors')" class="cloud cloud-4"><span>Sponsors</span></div>
+			<div onclick="toggleDetails('About')" class="cloud cloud-1"><span>About</span></div>
 		</li>
 
 	  </ul>
@@ -136,11 +136,8 @@
 	  $toggle = $('#toggle'),
 	  $about = $('#about'),
 	  $scene = $('#scene');
-		$('.cloud').on('click', function(event) {
-			console.log(event);
-		  alert("ho");
-	  });
-	  // Hide browser menu.
+
+      // Hide browser menu.
 	  (function() {
 		  setTimeout(function(){window.scrollTo(0,0);},0);
 	  })();
