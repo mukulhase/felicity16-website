@@ -116,8 +116,12 @@ body {
 	height: 20vh;
 }
 
-.wave::after {
-	background-color: #10e4e8;
+.wave.plain {
+	background-image: url(../assets/images/wave2.png);
+}
+
+.wave.plain::after {
+	background-color: #1cb2b8;
 	position: absolute;
 	display: block;
 	content: "";
@@ -127,12 +131,19 @@ body {
 	left: 0;
 }
 
-.wave.plain {
-	background-image: url(../assets/images/wave2.png);
-}
-
 .wave.paint {
 	background-image: url(../assets/images/wave1.png);
+}
+
+.wave.paint::after {
+	background-color: #10e4e8;
+	position: absolute;
+	display: block;
+	content: "";
+	top: 100%;
+	height: 100px;
+	width: 100%;
+	left: 0;
 }
 
 .wave.front {
@@ -200,14 +211,14 @@ body {
 	animation: bob 5s 0.1s infinite alternate linear;
 	/*margin: 0px -64px;*/
 	background-size: 128px 224px;
-	height: 424px;
+	height: 374px;
 	width: 648px;
 	background-image: url(../assets/images/boat.gif);
 	background-size: cover;
 	background-repeat: no-repeat;
 	bottom: 100px;
 	position: absolute;
-	right: 20%;
+	left: 10%;
 }
 
 @-webkit-keyframes wave {
