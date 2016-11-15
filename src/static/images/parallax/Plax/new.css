@@ -20,7 +20,7 @@ body {
 
 .land {
 	background: url(../assets/images/land.png) no-repeat 50% 100%;
-	bottom: -12vh;
+	bottom: -10vh;
 	background-size: cover;
 	position: absolute;
 	width: 110%;
@@ -145,8 +145,8 @@ body {
 }
 
 .wave.depth-40 {
-	-webkit-animation: wave 8s 0.1s infinite linear;
-	-moz-animation: wave 8s 0.1s infinite linear;
+	-webkit-animation: wave 6s 0.1s infinite linear;
+	-moz-animation: wave 6s 0.1s infinite linear;
 	animation: wave 6s 0.1s infinite linear;
 	bottom: 4vh;
 	margin: 0px 0px;
@@ -168,13 +168,13 @@ body {
 	margin: 0px 0px;
 }
 
-.lighthouse {
+.boat {
 	-webkit-transform-origin: 50% 90%;
 	-moz-transform-origin: 50% 90%;
 	transform-origin: 50% 90%;
-	-webkit-animation: wave 4s 0.1s infinite alternate linear;
-	-moz-animation: wave 4s 0.1s infinite alternate linear;
-	animation: wave 4s 0.1s infinite alternate linear;
+	-webkit-animation: bob 6s 0.1s infinite alternate linear;
+	-moz-animation: bob 6s 0.1s infinite alternate linear;
+	animation: bob 5s 0.1s infinite alternate linear;
 	/*margin: 0px -64px;*/
 	background-size: 128px 224px;
 	height: 424px;
@@ -250,9 +250,9 @@ body {
 		-moz-transform: translate3d(0,10%,0);
 	}
 	50% {
-		transform: translate3d(0,20%,0);
-		-webkit-transform: translate3d(0,20%,0);
-		-moz-transform: translate3d(0,20%,0);
+		transform: translate3d(0,15%,0);
+		-webkit-transform: translate3d(0,15%,0);
+		-moz-transform: translate3d(0,15%,0);
 	}
 	100% {
 		transform: translate3d(0,10%,0);
@@ -268,9 +268,9 @@ body {
 		-moz-transform: translate3d(0,10%,0);
 	}
 	50% {
-		transform: translate3d(0,20%,0);
-		-webkit-transform: translate3d(0,20%,0);
-		-moz-transform: translate3d(0,20%,0);
+		transform: translate3d(0,15%,0);
+		-webkit-transform: translate3d(0,15%,0);
+		-moz-transform: translate3d(0,15%,0);
 	}
 	100% {
 		transform: translate3d(0,10%,0);
@@ -286,9 +286,9 @@ body {
 		-moz-transform: translate3d(0,10%,0);
 	}
 	50% {
-		transform: translate3d(0,20%,0);
-		-webkit-transform: translate3d(0,20%,0);
-		-moz-transform: translate3d(0,20%,0);
+		transform: translate3d(0,15%,0);
+		-webkit-transform: translate3d(0,15%,0);
+		-moz-transform: translate3d(0,15%,0);
 	}
 	100% {
 		transform: translate3d(0,10%,0);
@@ -312,6 +312,61 @@ body {
 		transform: translate3d(0,10%,0);
 		-webkit-transform: translate3d(0,10%,0);
 		-moz-transform: translate3d(0,10%,0);
+	}
+}
+
+@-webkit-keyframes boat {
+	0% {
+		-webkit-transform: rotateZ(0deg) translate3d(0,10%,0) rotateZ(0deg);
+		-moz-transform: rotateZ(0deg) translate3d(0,10%,0) rotateZ(0deg);
+		transform: rotateZ(0deg) translate3d(0,10%,0) rotateZ(0deg);
+	}
+
+	100% {
+		-webkit-transform: rotateZ(360deg) translate3d(0,10%,0) rotateZ(-360deg);
+		-moz-transform: rotateZ(360deg) translate3d(0,10%,0) rotateZ(-360deg);
+		transform: rotateZ(360deg) translate3d(0,10%,0) rotateZ(-360deg);
+	}
+}
+
+@-moz-keyframes boat {
+	0% {
+		-webkit-transform: rotateZ(0deg) translate3d(0,10%,0) rotateZ(0deg);
+		-moz-transform: rotateZ(0deg) translate3d(0,10%,0) rotateZ(0deg);
+		transform: rotateZ(0deg) translate3d(0,10%,0) rotateZ(0deg);
+	}
+
+	100% {
+		-webkit-transform: rotateZ(360deg) translate3d(0,10%,0) rotateZ(-360deg);
+		-moz-transform: rotateZ(360deg) translate3d(0,10%,0) rotateZ(-360deg);
+		transform: rotateZ(360deg) translate3d(0,10%,0) rotateZ(-360deg);
+	}
+}
+
+@-ms-keyframes boat {
+	0% {
+		-webkit-transform: rotateZ(0deg) translate3d(0,10%,0) rotateZ(0deg);
+		-moz-transform: rotateZ(0deg) translate3d(0,10%,0) rotateZ(0deg);
+		transform: rotateZ(0deg) translate3d(0,10%,0) rotateZ(0deg);
+	}
+
+	100% {
+		-webkit-transform: rotateZ(360deg) translate3d(0,10%,0) rotateZ(-360deg);
+		-moz-transform: rotateZ(360deg) translate3d(0,10%,0) rotateZ(-360deg);
+		transform: rotateZ(360deg) translate3d(0,10%,0) rotateZ(-360deg);
+	}
+}
+
+@keyframes boat {
+	0% {
+		-webkit-transform: rotateZ(0deg) translate3d(0,10%,0) rotateZ(0deg);
+		-moz-transform: rotateZ(0deg) translate3d(0,10%,0) rotateZ(0deg);
+		transform: rotateZ(0deg) translate3d(0,10%,0) rotateZ(0deg);
+	}
+	100% {
+		-webkit-transform: rotateZ(360deg) translate3d(0,10%,0) rotateZ(-360deg);
+		-moz-transform: rotateZ(360deg) translate3d(0,10%,0) rotateZ(-360deg);
+		transform: rotateZ(360deg) translate3d(0,10%,0) rotateZ(-360deg);
 	}
 }
 
