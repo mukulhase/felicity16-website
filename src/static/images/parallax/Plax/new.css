@@ -1,8 +1,23 @@
 body {
-	background-color: lightblue;
+	background: url(../assets/images/background.png);
+	top: 40%;
 	background-size: cover;
 	text-align: center;
+}
 
+#frame {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	/*background-color: red;*/
+	z-index: 10000;
+	margin: 0px;
+	padding: 0px;
+	left: 0px;
+	top: 0px;
+	-moz-box-shadow:    inset 0 0 300px #000000;
+	-webkit-box-shadow: inset 0 0 300px #000000;
+	box-shadow:         inset 0 0 300px #000000;
 }
 
 .layer {
@@ -11,9 +26,9 @@ body {
 }
 
 .mountain {
- 	background: url(../assets/images/background.png) no-repeat 50% 100%;
+ 	background: url(../assets/images/mountains.png) no-repeat 50% 100%;
 	background-size: cover;
-	width: auto;
+	width: 115%;
 	height: 115%;
 }
 
@@ -28,14 +43,16 @@ body {
 }
 
 .land2 {
-	background: url(../assets/images/2hill.png) no-repeat 50% 100%;
-	bottom: -5vh;
+	background: url(../assets/images/grass.png) no-repeat 50% 50%;
+	/*background: url(../assets/images/2hill.png) no-repeat 50% 100%;*/
+	bottom: -80vh;
 	background-size: cover;
 	position: absolute;
-	width: 105%;
+	width: 115%;
+	height: 35%;
 	left: -5%;
-	top: 15%;
-
+	right: -5%;
+	top: 52%;
 }
 
 .land3 {
@@ -95,27 +112,45 @@ body {
 	left: -100%;
 	bottom: 0;
 	background-size: 40vh 20vh;
+	background-size: contain;
 	height: 20vh;
 }
 
-.wave:after {
-	background-color: #10e4e8;
+.wave.plain {
+	background-image: url(../assets/images/wave2.png);
+}
+
+.wave.plain::after {
+	background-color: #1cb2b8;
 	position: absolute;
 	display: block;
 	content: "";
-	top: 150%;
+	top: 100%;
+	height: 100px;
+	width: 100%;
 	left: 0;
-}
-
-.wave.plain {
-	background-image: url(../assets/images/wave2.png);	
 }
 
 .wave.paint {
 	background-image: url(../assets/images/wave1.png);
 }
 
-.wave.depth-10 {
+.wave.paint::after {
+	background-color: #10e4e8;
+	position: absolute;
+	display: block;
+	content: "";
+	top: 100%;
+	height: 100px;
+	width: 100%;
+	left: 0;
+}
+
+.wave.front {
+	background-image: url(../assets/images/new_wave.png);
+}
+
+/*.wave.depth-10 {
 	-webkit-animation: wave 8s 0.1s infinite linear;
 	-moz-animation: wave 8s 0.1s infinite linear;
 	animation: wave 6s 0.1s infinite linear;
@@ -129,29 +164,32 @@ body {
 	animation: wave 9s 0.1s infinite linear;
 	bottom: -3vh;
 	margin: 0px 0px;
-}
+}*/
 
 .wave.depth-30 {
 	-webkit-animation: wave 8s 0.1s infinite linear;
 	-moz-animation: wave 8s 0.1s infinite linear;
 	animation: wave 8s 0.1s infinite linear;
-	bottom: 0vh;
 	margin: 0px 0px;
+	bottom: -10vh;
+	height: 220px;
 }
 
 .wave.depth-40 {
-	-webkit-animation: wave 8s 0.1s infinite linear;
-	-moz-animation: wave 8s 0.1s infinite linear;
+	-webkit-animation: wave 6s 0.1s infinite linear;
+	-moz-animation: wave 6s 0.1s infinite linear;
 	animation: wave 6s 0.1s infinite linear;
-	bottom: 5vh;
 	margin: 0px 0px;
+	bottom: 0vh;
+	height: 180px;
 }
 
 .wave.depth-50 {
 	-webkit-animation: wave 8s 0.1s infinite linear;
 	-moz-animation: wave 8s 0.1s infinite linear;
 	animation: wave 5s 0.1s infinite linear;
-	bottom: 8vh;
+	height: 140px;
+	bottom: 9vh;
 	margin: 0px 0px;
 }
 
@@ -159,8 +197,28 @@ body {
 	-webkit-animation: wave 8s 0.1s infinite linear;
 	-moz-animation: wave 8s 0.1s infinite linear;
 	animation: wave 7s 0.1s infinite linear;
-	bottom: 12vh;
 	margin: 0px 0px;
+	bottom: 18vh;
+	height: 100px;
+}
+
+.boat {
+	-webkit-transform-origin: 50% 90%;
+	-moz-transform-origin: 50% 90%;
+	transform-origin: 50% 90%;
+	-webkit-animation: bob 6s 0.1s infinite alternate linear;
+	-moz-animation: bob 6s 0.1s infinite alternate linear;
+	animation: bob 5s 0.1s infinite alternate linear;
+	/*margin: 0px -64px;*/
+	background-size: 128px 224px;
+	height: 374px;
+	width: 648px;
+	background-image: url(../assets/images/boat.gif);
+	background-size: cover;
+	background-repeat: no-repeat;
+	bottom: 100px;
+	position: absolute;
+	left: 10%;
 }
 
 @-webkit-keyframes wave {
@@ -226,9 +284,9 @@ body {
 		-moz-transform: translate3d(0,10%,0);
 	}
 	50% {
-		transform: translate3d(0,20%,0);
-		-webkit-transform: translate3d(0,20%,0);
-		-moz-transform: translate3d(0,20%,0);
+		transform: translate3d(0,15%,0);
+		-webkit-transform: translate3d(0,15%,0);
+		-moz-transform: translate3d(0,15%,0);
 	}
 	100% {
 		transform: translate3d(0,10%,0);
@@ -244,9 +302,9 @@ body {
 		-moz-transform: translate3d(0,10%,0);
 	}
 	50% {
-		transform: translate3d(0,20%,0);
-		-webkit-transform: translate3d(0,20%,0);
-		-moz-transform: translate3d(0,20%,0);
+		transform: translate3d(0,15%,0);
+		-webkit-transform: translate3d(0,15%,0);
+		-moz-transform: translate3d(0,15%,0);
 	}
 	100% {
 		transform: translate3d(0,10%,0);
@@ -262,9 +320,9 @@ body {
 		-moz-transform: translate3d(0,10%,0);
 	}
 	50% {
-		transform: translate3d(0,20%,0);
-		-webkit-transform: translate3d(0,20%,0);
-		-moz-transform: translate3d(0,20%,0);
+		transform: translate3d(0,15%,0);
+		-webkit-transform: translate3d(0,15%,0);
+		-moz-transform: translate3d(0,15%,0);
 	}
 	100% {
 		transform: translate3d(0,10%,0);
@@ -291,13 +349,69 @@ body {
 	}
 }
 
+@-webkit-keyframes boat {
+	0% {
+		-webkit-transform: rotateZ(0deg) translate3d(0,10%,0) rotateZ(0deg);
+		-moz-transform: rotateZ(0deg) translate3d(0,10%,0) rotateZ(0deg);
+		transform: rotateZ(0deg) translate3d(0,10%,0) rotateZ(0deg);
+	}
+
+	100% {
+		-webkit-transform: rotateZ(360deg) translate3d(0,10%,0) rotateZ(-360deg);
+		-moz-transform: rotateZ(360deg) translate3d(0,10%,0) rotateZ(-360deg);
+		transform: rotateZ(360deg) translate3d(0,10%,0) rotateZ(-360deg);
+	}
+}
+
+@-moz-keyframes boat {
+	0% {
+		-webkit-transform: rotateZ(0deg) translate3d(0,10%,0) rotateZ(0deg);
+		-moz-transform: rotateZ(0deg) translate3d(0,10%,0) rotateZ(0deg);
+		transform: rotateZ(0deg) translate3d(0,10%,0) rotateZ(0deg);
+	}
+
+	100% {
+		-webkit-transform: rotateZ(360deg) translate3d(0,10%,0) rotateZ(-360deg);
+		-moz-transform: rotateZ(360deg) translate3d(0,10%,0) rotateZ(-360deg);
+		transform: rotateZ(360deg) translate3d(0,10%,0) rotateZ(-360deg);
+	}
+}
+
+@-ms-keyframes boat {
+	0% {
+		-webkit-transform: rotateZ(0deg) translate3d(0,10%,0) rotateZ(0deg);
+		-moz-transform: rotateZ(0deg) translate3d(0,10%,0) rotateZ(0deg);
+		transform: rotateZ(0deg) translate3d(0,10%,0) rotateZ(0deg);
+	}
+
+	100% {
+		-webkit-transform: rotateZ(360deg) translate3d(0,10%,0) rotateZ(-360deg);
+		-moz-transform: rotateZ(360deg) translate3d(0,10%,0) rotateZ(-360deg);
+		transform: rotateZ(360deg) translate3d(0,10%,0) rotateZ(-360deg);
+	}
+}
+
+@keyframes boat {
+	0% {
+		-webkit-transform: rotateZ(0deg) translate3d(0,10%,0) rotateZ(0deg);
+		-moz-transform: rotateZ(0deg) translate3d(0,10%,0) rotateZ(0deg);
+		transform: rotateZ(0deg) translate3d(0,10%,0) rotateZ(0deg);
+	}
+	100% {
+		-webkit-transform: rotateZ(360deg) translate3d(0,10%,0) rotateZ(-360deg);
+		-moz-transform: rotateZ(360deg) translate3d(0,10%,0) rotateZ(-360deg);
+		transform: rotateZ(360deg) translate3d(0,10%,0) rotateZ(-360deg);
+	}
+}
+
 .cloud {
 	background-image: url(../assets/images/cloud-1.png);
 	background-size: cover;
 	position: absolute;
-	height: 11.3vh;
+	height: 14.3vh;
 	width: 25.4vh;
 	color: black;
+	cursor: pointer;
 }
 
 .cloud span{
@@ -312,32 +426,32 @@ body {
 .cloud-1 {
 	left: 3%;
 	animation: bob 1.9s 0.01s infinite linear;
-	top: 6%;	
+	top: 6%;
 }
 
 
 .cloud-2 {
 	left: 20%;
 	animation: bob 2s 0.01s infinite linear;
-	top: 10%;	
+	top: 10%;
 }
 
 .cloud-3 {
 	left: 50%;
 	animation: bob 1.8s 0.01s infinite linear;
-	top: 2%;	
+	top: 2%;
 }
 
 .cloud-4 {
 	left: 70%;
 	animation: bob 1.6s 0.01s infinite linear;
-	top: 4%;	
+	top: 4%;
 }
 
 .cloud-5 {
 	left: 85%;
 	animation: bob 1.7s 0.01s infinite linear;
-	top: 8%;	
+	top: 8%;
 }
 
 .wrapper {
